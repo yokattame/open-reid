@@ -70,7 +70,7 @@ class Market1501(Dataset):
                 assert 1 <= cam <= 6
                 cam -= 1
                 pids.add(pid)
-                fname = ('{:08d}_{:02d}_{:04d}.jpg'
+                fname = ('{:08d}_{:02d}_{:05d}.jpg'
                          .format(pid, cam, len(identities[pid][cam])))
                 identities[pid][cam].append(fname)
                 shutil.copy(fpath, osp.join(images_dir, fname))

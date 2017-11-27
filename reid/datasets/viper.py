@@ -64,11 +64,11 @@ class VIPeR(Dataset):
         for pid, (cam1, cam2) in enumerate(zip(*cameras)):
             images = []
             # view-0
-            fname = '{:08d}_{:02d}_{:04d}.jpg'.format(pid, 0, 0)
+            fname = '{:08d}_{:02d}_{:05d}.bmp'.format(pid, 0, 0)
             imsave(osp.join(images_dir, fname), imread(cam1))
             images.append([fname])
             # view-1
-            fname = '{:08d}_{:02d}_{:04d}.jpg'.format(pid, 1, 0)
+            fname = '{:08d}_{:02d}_{:05d}.bmp'.format(pid, 1, 0)
             imsave(osp.join(images_dir, fname), imread(cam2))
             images.append([fname])
             identities.append(images)

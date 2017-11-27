@@ -74,7 +74,7 @@ class DukeMTMC(Dataset):
                 if pid >= len(identities):
                     assert pid == len(identities)
                     identities.append([[] for _ in range(8)])  # 8 camera views
-                fname = ('{:08d}_{:02d}_{:04d}.jpg'
+                fname = ('{:08d}_{:02d}_{:05d}.jpg'
                          .format(pid, cam, len(identities[pid][cam])))
                 identities[pid][cam].append(fname)
                 shutil.copy(fpath, osp.join(images_dir, fname))

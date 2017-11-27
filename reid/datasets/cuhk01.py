@@ -66,7 +66,7 @@ class CUHK01(Dataset):
             assert 1 <= pid <= 971
             assert 1 <= cam <= 4
             pid, cam = pid - 1, (cam - 1) // 2
-            fname = ('{:08d}_{:02d}_{:04d}.png'
+            fname = ('{:08d}_{:02d}_{:05d}.png'
                      .format(pid, cam, len(identities[pid][cam])))
             identities[pid][cam].append(fname)
             shutil.copy(fpath, osp.join(images_dir, fname))

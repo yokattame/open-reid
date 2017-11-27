@@ -6,6 +6,8 @@ from .cuhk03 import CUHK03
 from .dukemtmc import DukeMTMC
 from .market1501 import Market1501
 from .viper import VIPeR
+from .mars import MARS
+from .cuhksysu import CUHKSYSU
 
 
 __factory = {
@@ -14,6 +16,8 @@ __factory = {
     'cuhk03': CUHK03,
     'market1501': Market1501,
     'dukemtmc': DukeMTMC,
+    'mars': MARS,
+    'cuhksysu': CUHKSYSU,
 }
 
 
@@ -29,7 +33,7 @@ def create(name, root, *args, **kwargs):
     ----------
     name : str
         The dataset name. Can be one of 'viper', 'cuhk01', 'cuhk03',
-        'market1501', and 'dukemtmc'.
+        'market1501', 'dukemtmc', 'mars', 'cuhksysu'.
     root : str
         The path to the dataset directory.
     split_id : int, optional

@@ -65,7 +65,7 @@ class CUHK03(Dataset):
             for ref in refs:
                 img = deref(ref)
                 if img.size == 0 or img.ndim < 2: break
-                fname = '{:08d}_{:02d}_{:04d}.jpg'.format(pid, cam, len(fnames))
+                fname = '{:08d}_{:02d}_{:05d}.png'.format(pid, cam, len(fnames))
                 imsave(osp.join(images_dir, fname), img)
                 fnames.append(fname)
 
